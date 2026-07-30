@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PASSWORD PAGE -->
+  <div id="password-page" class="page active">
+    <div class="stars"></div>
+    <div class="lock-card">
+      <div class="cake-icon">🎂</div>
+      <h1>A Secret Awaits You</h1>
+      <p>Enter the password to unlock your surprise 🎁</p>
+      <div class="input-wrap">
+        <input type="password" id="pwd-input" placeholder="Enter password..." maxlength="10" />
+        <button onclick="checkPassword()">✨ Unlock</button>
+      </div>
+      <p id="error-msg" class="error-msg"></p>
+      <div class="hint">Hint: A special date 📅</div>
+    </div>
+  </div>
+
+  <!-- BIRTHDAY WEBSITE -->
+  <div id="birthday-page" class="page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-brand">🎉 Happy Birthday!</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#wishes">Wishes</a>
+        <a href="#memories">Memories</a>
+        <a href="#cake">Cake</a>
+      </div>
+    </nav>
+
+    <!-- SLIDE 1: HERO -->
+    <section id="home" class="slide slide-hero">
+      <div class="confetti-container" id="confetti"></div>
+      <div class="hero-content">
+        <div class="hero-sticker-row">
+          <span>🌸</span>
+          <span>🎂</span>
+          <span>🌸</span>
+        </div>
+        <p class="hero-label">wishing you the sweetest day</p>
+        <h1 class="hero-title">Happy Birthday<br><span class="bubu-name">Bubu</span> 🎀</h1>
+        <p class="hero-sub">You are loved more than words can say ❤️</p>
+        <p class="birthday-ago">✨ Just <strong>1 day ago</strong> — but every day celebrates you</p>
+        <a href="#wishes" class="btn-glow">Read Your Letter 💌</a>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: WISHES SLIDER -->
+    <section id="wishes" class="slide slide-wishes">
+      <h2 class="section-title">💌 Birthday Wishes</h2>
+      <div class="slider-container">
+        <div class="slider-track" id="slider-track">
+
+          <div class="wish-card">
+            <div class="wish-emoji">🫶🏻</div>
+            <p>"Happy Birthday to my favorite person in the world. Another year wiser, hotter, and more wonderful. Happy Birthday, my love." 🫶🏻🫶🏻</p>
+            <span>— Always yours, Shilpa 💕</span>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-emoji">🥰</div>
+            <p>"To the love of my life — may this year bring you as much joy as you give me every single day." 🥰🥰</p>
+            <span>— With all my love 💖</span>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-emoji">🫠</div>
+            <p>"Happy Birthday to the one who makes my world brighter every single day. Loving you is the easiest thing I've ever done." 🫠</p>
+            <span>— Forever yours 🌙</span>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-emoji">🤗</div>
+            <p>"Every day with you feels like a gift, but today we get to celebrate you. Happy Birthday, my love." 🤗🤗</p>
+            <span>— You are mine 🌸</span>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-emoji">🥰</div>
+            <p>"To the person who holds my heart — thank you for being my constant, my favorite conversation, and my home. Happy Birthday, my love." 🥰🥰</p>
+            <span>— Always & forever 💝</span>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="prevSlide()">‹</button>
+          <div class="dots" id="dots"></div>
+          <button class="slider-btn" onclick="nextSlide()">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: MEMORIES / LOVE LETTER -->
+    <section id="memories" class="slide slide-memories">
+      <h2 class="section-title">💝 From My Heart to Yours</h2>
+
+      <!-- Floating stickers around the letter -->
+      <div class="stickers-bg">
+        <span class="sticker s1">💖</span>
+        <span class="sticker s2">🌸</span>
+        <span class="sticker s3">✨</span>
+        <span class="sticker s4">🦋</span>
+        <span class="sticker s5">🌹</span>
+        <span class="sticker s6">💫</span>
+        <span class="sticker s7">🎀</span>
+        <span class="sticker s8">🌟</span>
+        <span class="sticker s9">💕</span>
+        <span class="sticker s10">🥰</span>
+      </div>
+
+      <div class="letter-wrapper">
+
+        <!-- Letter Paper -->
+        <div class="letter-paper">
+          <div class="letter-top-stickers">
+            <span>💌</span><span>🌸</span><span>💖</span><span>🌸</span><span>💌</span>
+          </div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">💖</span>
+            You are the <strong>best person in my life</strong>. I have learned so much from you. You are my <strong>inspiration</strong>.
+          </div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">🌸</span>
+            Do you remember the <strong>first time we met in college?</strong> The moment I saw you, I felt that you were a kind-hearted person. From the very first day, I liked your <em>voice, your smile, your way of looking at me, your nature, your behavior</em> — everything about you.
+          </div>
+
+          <div class="letter-divider">🌹 ✨ 🌹</div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">🦋</span>
+            You came into my life at a time when I truly needed someone. You are not just my love — you are my <strong>best friend, my family, and my everything</strong>.
+          </div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">🌟</span>
+            Whenever I am with you, I don't feel worried about anything. I always feel <em>safe, comfortable, and genuinely happy</em>. I may not always be able to make you realize how special you are to me, but trust me — <strong>you truly are</strong>.
+          </div>
+
+          <div class="letter-divider">💫 💕 💫</div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">🎀</span>
+            We have created so many <strong>beautiful memories together</strong> that I will never forget them. Every single moment with you is precious to me.
+          </div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">🥰</span>
+            And about what you always say — that you <em>don't look good</em> or that you're <em>not good enough</em> — please stop thinking that way. To me, <strong>you are a superhero</strong>. No one else can ever compare to you. I don't feel like talking to or being with any other guy because, for me, <strong>you are enough</strong>.
+          </div>
+
+          <div class="letter-divider">💖 🌸 💖</div>
+
+          <div class="letter-para">
+            <span class="letter-sticker-inline">✨</span>
+            I am honestly so <strong>happy to have you in my life</strong>. Just being with you means everything to me.
+          </div>
+
+          <div class="letter-bday-wish">
+            <div class="wish-stickers">🎂 🎉 🌟 🎈 💝</div>
+            <p>
+              On your birthday, I wish you <strong>endless happiness, good health, success,</strong> and all the love you truly deserve. May this new year of your life bring you countless reasons to smile, help you achieve every dream you have, and fill your heart with <strong>peace and joy</strong>.
+            </p>
+            <p>
+              Keep taking care of yourself, stay healthy, and never stop being the amazing person you are. I will always pray that you stay <strong>blessed, happy, and surrounded by love</strong>.
+            </p>
+            <div class="letter-sign">
+              <span class="sign-text">Happy Birthday, my Superhero! ❤️🎂</span>
+              <div class="sign-stickers">💖 🦸 💖</div>
+            </div>
+          </div>
+
+          <div class="letter-bottom-stickers">
+            <span>🌸</span><span>💕</span><span>🦋</span><span>💕</span><span>🌸</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SLIDE 4: CAKE -->
+    <section id="cake" class="slide slide-cake">
+      <h2 class="section-title">🎂 Make a Wish!</h2>
+      <div class="cake-wrapper">
+        <div class="cake-visual">
+          <div class="candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+          <div class="cake-top">🎂</div>
+          <div class="cake-layers">
+            <div class="layer layer-1">🍓 Strawberry Layer</div>
+            <div class="layer layer-2">🍫 Chocolate Layer</div>
+            <div class="layer layer-3">🍦 Vanilla Base</div>
+          </div>
+        </div>
+        <div class="wish-action">
+          <p>Close your eyes, make a wish, and blow out the candles! 🕯️</p>
+          <button class="btn-blow" onclick="blowCandles()">💨 Blow Candles!</button>
+          <div id="wish-message" class="wish-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Made with 💖 just for you | 🎉 Happy Birthday!</p>
+      <p class="footer-note">A day late, but the love is endless 🌙</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
